@@ -51,8 +51,8 @@ Chat de atendimento automotivo onde cliente abre caso no CRM direto pelo WhatsAp
 Figma, Asana, Confluence, chat whatsapp, Salesforce/CRM
 
 ## 🖼️ Fluxograma
-Em breve: imagem do fluxograma redesenhado no Figma (versão anonimizada)
-`https://www.figma.com/proto/iTayrNitft04k918SLgXum/Sem-t%C3%ADtulo?node-id=3-4&t=9OWYiJfVkiUfzawI-1`
+Imagem do fluxograma redesenhado no Figma (versão anonimizada)
+`/https://www.figma.com/proto/iTayrNitft04k918SLgXum/Sem-t%C3%ADtulo?node-id=3-4&t=9OWYiJfVkiUfzawI-1`
 
 ---
 **Autora:** iCarlk | QA & Process Analyst
