@@ -1,2 +1,58 @@
-# case-chat-automotivo-abertura-caso
-Case 2 - Fluxograma de abertura automática de casos via whatsapp | QA | Figma | Validação de duplicidade por VIN, memória de concessionaria e integração CRM - 100% anonimizado (LGPD)
+# Case 02 - Fluxograma - Abertura Automática de Casos via WhatsApp
+
+> Projeto 100% anonimizado para fins de portfólio | LGPD | Nenhum dado real de cliente ou empresa
+
+## 📌 Contexto
+Chat de atendimento automotivo onde cliente abre caso no CRM direto pelo WhatsApp, sem intervenção humana.
+
+**Meu papel:** QA Analyst Jr + Process Analyst
+- Desenhei fluxograma completo no Figma com todas as tomadas de decisão
+- Defini regras de obrigatoriedade por Motivo 1 e Motivo 2
+- Validei integração BLIP + CRM
+
+## 🔄 Fluxo que mapeei
+
+**1. Escolha do Motivo do Contato 1**
+- Peças, Problemas com Produto, Serviços da Concessionária, Garantia, Indisponibilidade
+
+**2. Validação de Duplicidade (Regra de Ouro)**
+- Sistema consulta por VIN/Chassi se já existe caso aberto com mesmo motivo
+- SIM: Informa protocolo existente e encerra
+- NÃO: Segue fluxo
+
+**3. Memória de Concessionária**
+- Consulta via API BLIP qual foi última concessionária do cliente
+- Pergunta: Manter ou trocar?
+
+**4. Coleta de Dados Obrigatórios**
+- Nome, CPF, E-mail, WhatsApp, Concessionária
+
+**5. Ramificação Motivo 2**
+- Ex: Problema Técnico > Ar-condicionado, Freio, Motor, Multimídia
+- Inputs: Veículo parado na oficina? Desde quando? Km atual? Primeira vez?
+
+**6. Integração com CRM**
+- Canal = WhatsApp
+- Gera protocolo + plano de atividades
+- Sucesso: Envia protocolo + pesquisa satisfação
+- Erro: Mensagem amigável + transbordo humano + log
+
+## ✅ Cenários de Teste que validei
+
+| ID | Cenário | Resultado Esperado |
+|---|---|---|
+| CT01 | Cliente com VIN já com caso aberto mesmo motivo | Bloqueia duplicidade e informa protocolo |
+| CT02 | Cliente com histórico de concessionária | Sugere última concessionária |
+| CT03 | Fluxo Garantia com veículo parado | Campos obrigatórios: Km, data entrada oficina |
+| CT04 | Falha na integração CRM | Mensagem de erro + transbordo + log |
+| CT05 | Cliente novo sem histórico | Pula etapa de memória e pede concessionária |
+
+## 🛠️ Ferramentas
+Figma, Asana, Confluence, chat whatsapp, Salesforce/CRM
+
+## 🖼️ Fluxograma
+Em breve: imagem do fluxograma redesenhado no Figma (versão anonimizada)
+`/em breve`
+
+---
+**Autora:** iCarlk | QA & Process Analyst
