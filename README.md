@@ -54,5 +54,32 @@ Figma, Asana, Confluence, chat whatsapp, Salesforce/CRM
 Imagem do fluxograma redesenhado no Figma (versão anonimizada)
 `/https://www.figma.com/proto/iTayrNitft04k918SLgXum/Sem-t%C3%ADtulo?node-id=3-4&t=9OWYiJfVkiUfzawI-1`
 
+
+---
+## 🚀 Nível 1 - Automação de Testes de API (Postman)
+
+Implementei a automação da API de abertura de caso para validar o fluxo mapeado.
+
+**O que foi feito:**
+- Criei uma requisição `POST https://jsonplaceholder.typicode.com/posts` simulando o endpoint de abertura de caso via WhatsApp.
+- Enviei no `Body` dados anonimizados: `vin`, `canal`, `motivo` e `concessionaria`.
+
+**Automação (Postman Scripts - After Response):**
+```javascript
+pm.test("CT01 - Abertura de caso deve ser 201", function () {
+    pm.response.to.have.status(201);
+});
+pm.test("CT02 - Deve gerar protocolo com ID", function () {
+    pm.expect(pm.response.json()).to.have.property('id');
+});
+pm.test("CT03 - Deve salvar VIN enviado", function () {
+    pm.expect(pm.response.json()).to.have.property('vin');
+});
+
+<img width="1057" height="488" alt="image" src="https://github.com/user-attachments/assets/0208f989-7d3d-4fe0-a9fa-9cdda6aa0060" />
+
+Resultado: ✅ 3/3 PASSED - Validação automatizada de criação de caso, geração de protocolo e persistência do chassi.Conceito aplicado: Transformei validação manual (olhar status 201 com o olho) em validação automatizada (robô confere por mim).
+
+
 ---
 **Autora:** iCarlk | QA & Process Analyst
