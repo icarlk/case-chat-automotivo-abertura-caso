@@ -52,7 +52,7 @@ Figma, Asana, Confluence, chat whatsapp, Salesforce/CRM
 
 ## 🖼️ Fluxograma
 Imagem do fluxograma redesenhado no Figma (versão anonimizada)
-`/https://www.figma.com/proto/iTayrNitft04k918SLgXum/Sem-t%C3%ADtulo?node-id=3-4&t=9OWYiJfVkiUfzawI-1`
+(https://www.figma.com/proto/iTayrNitft04k918SLgXum/Sem-t%C3%ADtulo?node-id=3-4&t=9OWYiJfVkiUfzawI-1)
 
 
 ## 🚀 Nível 1 - Automação de Testes de API (Postman)
