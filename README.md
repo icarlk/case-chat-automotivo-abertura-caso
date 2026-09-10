@@ -57,7 +57,7 @@ Imagem do fluxograma redesenhado no Figma (versão anonimizada)
 
 ## 🚀 Nível 1 - Automação de Testes de API (Postman)
 
-Implementei a automação da API de abertura de caso para validar o fluxo mapeado.
+Estudo de automação da API de abertura de caso para validar o fluxo mapeado. (Exercicío)
 
 **O que foi feito:**
 - Criei uma requisição POST (https://jsonplaceholder.typicode.com/posts) simulando o endpoint de abertura de caso via WhatsApp.
@@ -69,6 +69,29 @@ Implementei a automação da API de abertura de caso para validar o fluxo mapead
 
 **Resultado:** ✅ 3/3 PASSED
 
+
+## 🧪 Nível 2 - Em aprendizado: Testes Negativos e Regra de Ouro
+
+> **Contexto de estudo:** Este é um exercício prático para evoluir de testes de caminho feliz para testes negativos, aplicando a Regra de Ouro que mapeei no fluxo (não duplicar casos para o mesmo VIN).
+
+**O que eu aprendi neste nível:**
+- **Conceito de Happy vs Unhappy Path:** Não basta testar quando dá certo (201), preciso testar quando o usuário erra.
+- **Por que 409 Conflict:** Entendi que é o código usado quando o sistema tenta criar algo que já existe. No caso, seria barrar um segundo caso aberto para o mesmo chassi.
+- **Por que 400 Bad Request:** Quando o body vem sem dado obrigatório (sem VIN), a API deve retornar 400.
+- **Case-sensitive:** Descobri na prática que `id` é diferente de `ID` - um detalhe que quebra integração.
+
+**Automação realizada no Postman (After Response):**
+- CT01 a CT03: Validação de criação (201 + ID + VIN) - Nível 1
+- CT04: Simulação da Regra de Ouro - quando VIN já existe, deveria retornar 409
+- CT05: Validação de body sem VIN - deveria retornar 400
+
+**Evidência - 5/5 PASSED (em ambiente de mock):**
+![Evidencia N2 - 5/5 PASSED](https://github.com/user-attachments/assets/f3f98d85-fedd-4da5-b683-8ff74c0b4b19)
+
+
+*Nota: Usei jsonplaceholder como API mock para treino. Numa API real, os cenários CT04 e CT05 validariam os status 409 e 400 reais. O objetivo aqui foi praticar a escrita dos cenários negativos.*
+
+**Resultado:** ✅ Entendi a importância de cobrir cenários negativos e como documentar a Regra de Ouro em automação.
 ---
 **Autora:** 1Car1k | QA & Process Analyst
 
