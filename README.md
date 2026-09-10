@@ -76,10 +76,6 @@ pm.test("CT03 - Deve salvar VIN enviado", function () {
     pm.expect(pm.response.json()).to.have.property('vin');
 });
 
-![evidencia - 3/3 PASSED} (https://github.com/user-attachments/assets/0208f989-7d3d-4fe0-a9fa-9cdda6aa0060)
-
-Resultado: ✅ 3/3 PASSED - Validação automatizada de criação de caso, geração de protocolo e persistência do chassi.Conceito aplicado: Transformei validação manual (olhar status 201 com o olho) em validação automatizada (robô confere por mim).
-
 
 ---
 **Autora:** iCarlk | QA & Process Analyst
