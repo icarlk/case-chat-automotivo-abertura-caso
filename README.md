@@ -74,7 +74,11 @@ pm.test("CT02 - Deve gerar protocolo com ID", function () {
 });
 pm.test("CT03 - Deve salvar VIN enviado", function () {
     pm.expect(pm.response.json()).to.have.property('vin');
-});
+}); ```
+
+![Evidencia - 3/3 PASSED](https://github.com/user-attachments/assets/0208f989-7d3d-4fe0-a9fa-9cddaca80060)
+
+**Resultado:** ✅ 3/3 PASSED
 
 
 ---
