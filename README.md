@@ -60,20 +60,24 @@ Imagem do fluxograma redesenhado no Figma (versão anonimizada)
 Implementei a automação da API de abertura de caso para validar o fluxo mapeado.
 
 **O que foi feito:**
-- Criei uma requisição `POST https://jsonplaceholder.typicode.com/posts` simulando o endpoint de abertura de caso via WhatsApp.
-- Enviei no `Body` dados anonimizados: `vin`, `canal`, `motivo` e `concessionaria`.
+- Criei uma requisição POST https://jsonplaceholder.typicode.com/posts simulando o endpoint de abertura de caso via WhatsApp.
+- Enviei no Body dados anonimizados: vin, canal, motivo e concessionaria.
 
 **Automação (Postman Scripts - After Response):**
-```javascript
-pm.test("CT01 - Abertura de caso deve ser 201", function () {
-    pm.response.to.have.status(201);
-});
-pm.test("CT02 - Deve gerar protocolo com ID", function () {
-    pm.expect(pm.response.json()).to.have.property('id');
-});
-pm.test("CT03 - Deve salvar VIN enviado", function () {
-    pm.expect(pm.response.json()).to.have.property('vin');
-});
+    pm.test("CT01 - Abertura de caso deve ser 201", function () {
+        pm.response.to.have.status(201);
+    });
+    pm.test("CT02 - Deve gerar protocolo com ID", function () {
+        pm.expect(pm.response.json()).to.have.property('id');
+    });
+    pm.test("CT03 - Deve salvar VIN enviado", function () {
+        pm.expect(pm.response.json()).to.have.property('vin');
+    });
+
+![Evidencia - 3/3 PASSED](https://github.com/user-attachments/assets/0208f989-7d3d-4fe0-a9fa-9cddaca80060)
+
+**Resultado:** ✅ 3/3 PASSED
 
 ---
-**Autora:** iCarlk | QA & Process Analyst
+**Autora:** 1Car1k | QA & Process Analyst
+
