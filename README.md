@@ -60,7 +60,7 @@ Imagem do fluxograma redesenhado no Figma (versão anonimizada)
 Implementei a automação da API de abertura de caso para validar o fluxo mapeado.
 
 **O que foi feito:**
-- Criei uma requisição POST https://jsonplaceholder.typicode.com/posts simulando o endpoint de abertura de caso via WhatsApp.
+- Criei uma requisição POST (https://jsonplaceholder.typicode.com/posts) simulando o endpoint de abertura de caso via WhatsApp.
 - Enviei no Body dados anonimizados: vin, canal, motivo e concessionaria.
 
 **Automação (Postman Scripts - After Response):**
@@ -74,10 +74,11 @@ Implementei a automação da API de abertura de caso para validar o fluxo mapead
         pm.expect(pm.response.json()).to.have.property('vin');
     });
 
-![Evidencia - 3/3 PASSED](https://github.com/user-attachments/assets/0208f989-7d3d-4fe0-a9fa-9cddaca80060)
+![Evidencia - 3/3 PASSED](https://github.com/user-attachments/assets/f95b79d6-6ad3-4e15-922f-cdd5a52bac5b)
 
 **Resultado:** ✅ 3/3 PASSED
 
 ---
 **Autora:** 1Car1k | QA & Process Analyst
+
 
