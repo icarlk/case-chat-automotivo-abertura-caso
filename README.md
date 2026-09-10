@@ -64,16 +64,7 @@ Implementei a automação da API de abertura de caso para validar o fluxo mapead
 - Enviei no Body dados anonimizados: vin, canal, motivo e concessionaria.
 
 **Automação (Postman Scripts - After Response):**
-    pm.test("CT01 - Abertura de caso deve ser 201", function () {
-        pm.response.to.have.status(201);
-    });
-    pm.test("CT02 - Deve gerar protocolo com ID", function () {
-        pm.expect(pm.response.json()).to.have.property('id');
-    });
-    pm.test("CT03 - Deve salvar VIN enviado", function () {
-        pm.expect(pm.response.json()).to.have.property('vin');
-    });
-
+    pm.test("CT01...
 ![Evidencia - 3/3 PASSED](https://github.com/user-attachments/assets/f95b79d6-6ad3-4e15-922f-cdd5a52bac5b)
 
 **Resultado:** ✅ 3/3 PASSED
